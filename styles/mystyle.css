@@ -22,8 +22,19 @@ header{
     background-color: gold;
     height: 500px;
 }
+header img{
+    width: 30%;
+}
 .about-container{
     display: grid;
     grid-template-columns: repeat(2,1fr);
     padding: 20px;
+}
+.pet{
+    background-color: antiquewhite;
+    padding: 10px;
+    border: 1px solid black;
+}
+.hightlight{
+    border-left: 10px solid yellow;
 }
