@@ -4,7 +4,7 @@ function displayCards(){
     for(let i=0;i<pets.length;i++){
         let pet = pets[i];
         console.log(pet)
-        Cards.innerHTML+=`</p>
+        Cards.innerHTML+=`
         <div class="pet">
             <p>${pet.name}</p>
             <p>${pet.age}</p>
@@ -16,10 +16,9 @@ function displayCards(){
     }
 }
 
-
 function displayRows(){
     //get the tbody
-    const Table = document.getElementById("petRows")
+    const Table = document.getElementById("petRows");
     //clear the tbody (for)
     let row="";
             //Row.innerHMTL='
@@ -35,7 +34,7 @@ function displayRows(){
                 <td>${pet.age}</td>
                 <td>${pet.gender}</td>
                 <td>${pet.breed}</td>
-                <td><button class="btn btn-sm btn-danger"  onclick="deletePet(${i})"> Delete </button></td>
+                <td> <button class="btn btn-sm btn-danger"  onclick="deletePet(${i})"> Delete </button></td>
             </tr>
             `;
     }

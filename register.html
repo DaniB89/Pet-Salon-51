@@ -20,55 +20,67 @@
         <h2>Register</h2>
         <div class="register-form">
             <div class="mb-3">
-            <label>Name:</label>
-            <input type="text" id="txtName" class="form control">
+                <label>Name:</label>
+                <input type="text" id="txtName" class="form control">
             </div>
             <div class="mb-3">
-            <label>Age:</label>
-            <input type="text" id="txtAge" class="form control">
+                <label>Age:</label>
+                <input type="text" id="txtAge" class="form control">
             </div>
             <div class="mb-3">
-            <label>Gender:</label>
-                <input  type="radio" name="gender" id="inlineRadio2" value="Male"/>
-                <label for="Male">Male</label>
-
-                <input  type="radio" name="gender" id="inlineRadio2" value="Female"/>
-                <label for="female">Female</label>
+                <label>Gender:</label>
+                <input type="text" id="txtGender" class="form-control">
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input"  type="radio" name="gender" id="inlineRadio1" value="Male"/>
+                    <label class="form-check-label" for="inlineRadio1">Male</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input"  type="radio" name="gender" id="inlineRadio2" value="Female"/>
+                    <label class="form-check-label" for="inlineRadio2">Female</label>
+                </div>
             <div class="mb-3">
-            <label>Breed:</label>
-            <input type="text" id="txtBreed" class="form control">
+                <label>Breed:</label>
+                <input type="text" id="txtBreed" class="form-control">
             </div>
             <div>
                 <select id="txtService" class="form-select">
-                    <option value="grooming"></option>
-                    <option value="vaccines"></option>
-                    <option value="nails"></option>
+                    <option value="grooming">Grooming</option>
+                    <option value="vaccines">Vaccines</option>
+                    <option value="nails">Nails</option>
                 </select>
             </div>
+
+
             <div>
-            <button onclick="register()" class="btn btn-dark">Register</button>
+                <button onclick="register()" class="btn btn-dark">Register</button>
             </div>
-        <div>
-            <h2>Registered Pets<span id="totalPets">100</span></h2>
-            <div id="petCards">
+
+
+        </div>
+        <h2>Register Pets</h2>
+        <h2>Registered Pets <span id="totalPets">100</span></h2>
+        <div id="petCards">
             
-            </div>
-            <div class="mb-3">
-                <input type="search" class="form-control" id>
-                <button onclick="search();">Search</button>
-            </div>
-            <div>
-                <table class="table">
-                    <thead>
-                        <tr>
-                            <th>Name</th>
-                            <th>Age</th>
-                            <th>Gender</th>
-                            <th>Actions</th>
-                        </tr>
-                    </thead>
-                </table>
-            </div>
+        </div>
+        <div class="mb-3">
+            <input type="search" class="form-control" id="txtSearch">
+            <button onclick="search();">Search</button>
+        </div>
+        <div>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Age</th>
+                        <th>Gender</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody id="petRows">
+                    <!--delete this hard code (static)-->
+                </tbody>
+            </table>
+        </div>
             <button onclick="deletePet()" class="btn btn-dark">Delete</button>
         </div>
     </main>
