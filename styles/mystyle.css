@@ -17,6 +17,13 @@ img{
 h2{
     text-align: center;
 }
+
+/*utilities*/
+.container{
+    width: 90%;
+    margin: 0 auto;
+}
+
 /*header*/
 header{
     background-color: gold;
@@ -37,4 +44,21 @@ header img{
 }
 .hightlight{
     border-left: 10px solid yellow;
+}
+
+/*about us*/
+.about-container{
+    display: flex;
+    flex-direction: row;
+    border: 2px solid brown;
+}
+.more-about-item{
+    margin-right: 10px;
+    background-color: antiquewhite;
+}
+.about-item-text{
+    padding: 30px;
+}
+ul li{
+    list-style: none;
 }
