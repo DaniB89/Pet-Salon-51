@@ -1,10 +1,10 @@
 function displayCards(){
-    const Cards = document.getElementById("petCards");
-    Cards.innerHTML="";
+    const CARDS = document.getElementById("petCards");
+    CARDS.innerHTML="";
     for(let i=0;i<pets.length;i++){
         let pet = pets[i];
         console.log(pet)
-        Cards.innerHTML+=`
+        CARDS.innerHTML+=`
         <div class="pet">
             <p>${pet.name}</p>
             <p>${pet.age}</p>
@@ -26,8 +26,10 @@ function displayRows(){
 
             // </tr>
             //`
+    //travel the array (for)
     for(let i=0;i<pets.length;i++){
         let pet = pets[i];
+        //create the template row
         row+=`
             <tr id="${i}">
                 <td>${pet.name}</td>
@@ -44,3 +46,4 @@ function displayRows(){
 
 }
 
+//*** on the register.js replace the displayCards() by displayRows() */

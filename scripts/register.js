@@ -1,5 +1,3 @@
-console.log("Register");
-
 let pets=[];//empty array
 //create the constructor
 //<------parameters (local) --->
@@ -55,15 +53,7 @@ function deletePet(petID){
     displayRows();
 }
 
-function init(){
-    console.log("Init fn");
-    let scooby = new Pet("Scooby",60,"Male","Dane","grooming");
-    let scrappy = new Pet("Scooby",50,"Male","Boxer","vaccines");
-    pets.push(scooby,scrappy);
-    // displayCards();
-    displayRows();
-}
-window.onload=init;//it waits to render the html
+
 
 //push pets into the array
 pets.push();
@@ -75,8 +65,7 @@ function search(){
     let ss=document.getElementById("textSearch").value;
     let foundPet=null;
     let id;
-    console.log(ss)
-
+    
     for(let i=0;i<pets.length;i++){
         if(pets[i].name.toLowerCase() == ss.toLowerCase()){
             foundPet=pets[i];
@@ -87,6 +76,16 @@ function search(){
     if(foundPet){
         document.getElementById(id).classList.add("highlight");
     }else{
-        document.querySelectorAll("tr").classList.remove("highlight");
+        displayRows();
     }
 }
+
+function init(){
+    console.log("Init fn");
+    let scooby = new Pet("Scooby",60,"Male","Dane","grooming");
+    let scrappy = new Pet("Scooby",50,"Male","Boxer","vaccines");
+    pets.push(scooby,scrappy);
+    // displayCards();
+    displayRows();
+}
+window.onload=init;//it waits to render the html
